@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= post.title
+  body
+    h1= post.title
+    p= post.content
+    p Author: #{post.author.name}
+    h2 Comments
+    ul
+      each comment in comments
+        li
+          p= comment.content
+          p Author: #{comment.author.name}
+    a(href='/posts') Back to Posts

@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Posts
+  body
+    h1 Posts
+    ul
+      each post in posts
+        li
+          h2= post.title
+          p= post.content
+          p Author: #{post.author.name}
+          a(href=`/posts/${post._id}`) View Post
+    a(href='/') Back to Home
